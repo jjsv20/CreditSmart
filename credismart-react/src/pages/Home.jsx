@@ -1,4 +1,3 @@
-
 import React from 'react'
 import { Hero } from '../components/Hero';
 import { credits } from '../data/credits';
@@ -14,7 +13,7 @@ export const Home = () => {
 
             <main className='container'>
                 <section className='credits-section'>
-                    <h2>Nuestros Créditos</h2>
+                    <h2 className='credits-title'>Nuestros Créditos</h2>
             
                     <div className='credits-grid'>
                         {credits.map((credits) => { 

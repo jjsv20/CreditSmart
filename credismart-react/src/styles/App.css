@@ -9,13 +9,13 @@ body {
     background-color: #000000;
     padding: 1em;
     color: rgb(255, 255, 255);
+    
 }
 
 .navbar .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #ffe600;
     text-decoration: none;
     letter-spacing: 1px;
     transition: 0.3s;
@@ -61,6 +61,161 @@ body {
   font-weight: bold;
 
 }
+
+/* Hero */
+.hero {
+    background-color: #0431c8; 
+    color: #ffffff;
+    padding: 150px 20px; 
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.btn-hero {
+    background-color: #ffffff;
+    color: #387a3a;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-hero:hover {
+    background-color: #e6e6e6;
+    color: #43656e;
+}
+
+.credits-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #000000 !important; 
+    position: relative;
+    display: inline-block;
+    margin: 100px 0 20px 0;
+}
+
+.credits-title::after {
+    content: "";
+    width: 80px;         
+    height: 4px;
+    background: #d66b00;
+    display: block;
+    margin: 8px auto 0;    /* centro */
+}
+
+.credit-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    width: 100%;
+    max-width: 900px;
+    color: #000000;
+}
+
+.credit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(102, 102, 102, 0.492);
+}
+
+
+.credit-card-image img{
+    width: 200px;
+    width: 100%;
+    background-size: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.credit-card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.credit-card-content h3 {
+    font-size: 1.2rem;
+    font-weight: 750;
+    margin: 0;
+}
+
+.description {
+    font-size: 1.0rem;
+    color: #000000;
+    
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.0rem;
+    font-weight: 500;
+}
+
+.detail-item .label {
+    color: #000000;
+    font-weight: 750;
+}
+
+.detail-item .value {
+    color: #000000;
+}
+
+.btn-primary {
+    padding: 12px 0;
+    background-color: #2300e8;
+    color: #ffffff;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #1911a8;
+    color: #fff;
+}
+
+.credits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas fijas */
+    gap: 24px; /* espacio entre tarjetas */
+    padding: 20px;
+}
+
+
+
+/******************** Footer ********************/
+.footer {
+    background-color: #000000; 
+    color: #ffffff; 
+    padding: 20px 0;
+    font-size: 1.0rem;
+    margin-top: 60px;
+}
+
+
+
 
 /* Responsive */
 @media (max-width: 768px) {

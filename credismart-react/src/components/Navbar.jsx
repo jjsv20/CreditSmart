@@ -18,10 +18,10 @@ export const Navbar = () => {
                         <Link to="/" className={isActive('/')}>Inicio</Link>
                     </li>
                     <li>
-                        <Link to="/simulator" className={isActive('/simulator')}>Simulador</Link>
+                        <Link to="/simulador" className={isActive('/simulador')}>Simulador</Link>
                     </li>
                     <li>
-                        <Link to="/credits" className={isActive('/credits')}>Créditos</Link>
+                        <Link to="/solicitar" className={isActive('/solicitar')}>Créditos</Link>
                     </li>
                     <li>
                         <Link to="/about" className={isActive('/about')}>Nosotros</Link>
