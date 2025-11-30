@@ -12,7 +12,14 @@ const CreditCard = ({credits}) => {
         requirements,
         icon,
     }   = credits;
-    
+
+    const formatCurrency = (value) =>
+    new Intl.NumberFormat("es-CO", {
+        style: "currency",
+        currency: "COP",
+        maximumFractionDigits: 0
+    }).format(value);
+
     return (
         <div className='credit-card'>
             <div className='card-header'>
@@ -31,7 +38,7 @@ const CreditCard = ({credits}) => {
                 <div className='detail-item'>
                     <span className='label'>Monto:</span>
                     <span className='value'>
-                        {formtCurrency(montoMin) - formtCurrency(montoMax)}
+                        {formatCurrency(montoMin)} - {formatCurrency(montoMax)}
                     </span>
                 </div>
 
@@ -46,4 +53,4 @@ const CreditCard = ({credits}) => {
     )
 }
 
-export default CreditCard
+export default CreditCard;
