@@ -6,7 +6,7 @@ export const credits = [
         montoMin: 1000000,
         montoMax: 50000000,
         tasaInteres: 1.2,
-        mazTiempo: 60,
+        maxTiempo: 60,
         requirements: [
             "Ser mayor de 18 años",
             "Tener ingresos comprobables",
@@ -22,7 +22,7 @@ export const credits = [
         montoMin: 5000000,
         montoMax: 80000000,
         tasaInteres: 0.95,
-        mazTiempo: 72,
+        maxTiempo: 72,
         requirements: [
             "Ser mayor de 18 años",
             "Tener ingresos comprobables",
@@ -38,7 +38,7 @@ export const credits = [
         montoMin: 20000000,
         montoMax: 500000000,
         tasaInteres: 0.75,
-        mazTiempo: 240,
+        maxTiempo: 240,
         requirements: [
             "Ser mayor de 18 años",
             "Tener ingresos comprobables",
@@ -54,7 +54,7 @@ export const credits = [
         montoMin: 2000000,
         montoMax: 30000000,
         tasaInteres: 0.85,
-        mazTiempo: 48,
+        maxTiempo: 48,
         requirements: [
             "Ser mayor de 18 años",
             "Tener ingresos comprobables",
@@ -70,7 +70,7 @@ export const credits = [
         montoMin: 5000000,
         montoMax: 100000000,
         tasaInteres: 1.1,
-        mazTiempo: 84,
+        maxTiempo: 84,
         requirements: [
             "Ser mayor de 18 años", 
             "Tener ingresos comprobables",
@@ -86,7 +86,7 @@ export const credits = [
         montoMin: 3000000,
         montoMax: 40000000,
         tasaInteres: 0.9,
-        mazTiempo: 60,
+        maxTiempo: 60,
         requirements: [
             "Ser mayor de 18 años", 
             "Tener ingresos comprobables",
@@ -102,7 +102,7 @@ export const credits = [
         montoMin: 1000000,
         montoMax: 20000000,
         tasaInteres: 1.3,
-        mazTiempo: 36,
+        maxTiempo: 36,
         requirements: [
             "Ser mayor de 18 años",
             "Tener ingresos comprobables",
@@ -118,7 +118,7 @@ export const credits = [
         montoMin: 2000000,
         montoMax: 25000000,
         tasaInteres: 1.15,
-        mazTiempo: 48,
+        maxTiempo: 48,
         requirements: [
             "Ser mayor de 18 años",
             "Tener ingresos comprobables",
@@ -134,7 +134,7 @@ export const credits = [
         montoMin: 3000000,
         montoMax: 40000000,
         tasaInteres: 1.05,
-        mazTiempo: 60,
+        maxTiempo: 60,
         requirements: [
             "Ser mayor de 18 años",
             "Tener ingresos comprobables",
