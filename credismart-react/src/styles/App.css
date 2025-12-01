@@ -6,9 +6,9 @@ body {
 }
 
 .navbar {
-    background-color: #000000;
+    background-color: #ffffff;
     padding: 1em;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     
 }
 
@@ -24,7 +24,7 @@ body {
 .nav-brand {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #ffffff !important; 
+  color: #000000 !important; 
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -41,13 +41,14 @@ body {
 }
 
 .nav-menu a {
-  color: #ffffff;
+  color: #000000;
   text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
   transition: 0.3s;
   padding-bottom: 3px;
   border-bottom: 2px solid transparent;
+  font-weight: 750;
 }
 
 .nav-menu a:hover {
@@ -64,53 +65,138 @@ body {
 
 /* Hero */
 .hero {
-    background-color: #0431c8; 
-    color: #ffffff;
-    padding: 150px 20px; 
-    text-align: center;
+  background: linear-gradient(to right, #2563eb, #1e40af);
+  color: #ffffff;
+  padding: 50px 20px; 
+  text-align: center;
 }
 
 .hero h1 {
-    font-size: 5rem;
+    font-size: 4rem;
     margin-bottom: 20px;
+    font-weight: 750;
 }
+
+.highlight {
+  color: #e6d200;   /* Cambie este color si quiere */
+  font-weight: 800;
+}
+
 
 .hero p {
     font-size: 1.5rem;
     margin-bottom: 30px;
 }
 
-.btn-hero {
-    background-color: #ffffff;
-    color: #387a3a;
-    padding: 12px 25px;
-    border-radius: 5px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: all 0.3s ease;
+/* Contenedor de botones */
+.hero-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
 }
 
-.btn-hero:hover {
-    background-color: #e6e6e6;
-    color: #43656e;
+/* Botón principal */
+.btn-primary-hero {
+  background-color: #e6d200;
+  color: #0431c8;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: 0.3s;
+  font-weight: 600;
 }
+
+.btn-primary-hero:hover {
+  background-color: #fff157;
+}
+
+/* Botón secundario */
+.btn-secondary-hero {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.btn-secondary-hero:hover {
+  background-color: #ffffff;
+  color: #0431c8;
+}
+
+
+/* Contenedor horizontal */
+.beneficios {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 20px;
+  padding: 60px 20px;
+  background: #fff;
+}
+
+/* Tarjetas */
+.beneficio-card {
+  flex: 1;                     
+  max-width: 25%;               
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 18px;
+  padding: 40px 25px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+.beneficio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1);
+}
+
+/* Íconos */
+.icono {
+  width: 80px;
+  margin-bottom: 45px;
+}
+
+/* Títulos */
+.beneficio-card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0d1b3f;
+  margin-bottom: 10px;
+}
+
+/* Texto */
+.beneficio-card p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.5;
+  max-width: 260px;
+  margin: 0 auto;
+}
+
 
 .credits-title {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     font-weight: bold;
     color: #000000 !important; 
     position: relative;
     display: inline-block;
-    margin: 100px 0 20px 0;
+    margin: 80px 0 20px 0;
 }
 
-.credits-title::after {
-    content: "";
-    width: 80px;         
-    height: 4px;
-    background: #d66b00;
-    display: block;
-    margin: 8px auto 0;    /* centro */
+.credits-p{
+    font-size: 1.5rem;
+    color: #8d8d8d !important; 
+    margin-bottom: 40px;
 }
 
 .credit-card {
@@ -204,14 +290,73 @@ body {
 }
 
 
+/* Sección CTA */
+.endhero {
+  background:  #2563eb;
+  color: #ffffff;
+  padding: 80px 20px; 
+  text-align: center;
+  margin: 80px 0 20px 0;
+}
+
+.endhero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 750;
+}
+
+/* Contenedor de botones */
+.endhero-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Botón principal */
+.btn-primary-endhero {
+  background-color: #e6d200;
+  color: #0431c8;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.btn-primary-endhero:hover {
+  background-color: #fff157;
+}
+
+/* Botón secundario */
+.btn-secondary-endhero {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.btn-secondary-endhero:hover {
+  background-color: #ffffff;
+  color: #0431c8;
+}
+
+
 
 /******************** Footer ********************/
 .footer {
-    background-color: #000000; 
+    background-color: #0f1828; 
     color: #ffffff; 
-    padding: 20px 0;
+    padding: 60px 0 30px 0;
     font-size: 1.0rem;
-    margin-top: 60px;
+    margin-top: 0;
+
 }
 
 

@@ -37,7 +37,7 @@ const Simulador = () => {
           <h2 className='credits-title'>Catálogo de Créditos</h2>
           
             <div class="row mb-4">
-              <div class="col-md-6">
+              <div class="col-md-4">
                 <input type="text" 
                   class="form-control" 
                   placeholder="Buscar crédito por nombre" 

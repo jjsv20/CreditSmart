@@ -21,7 +21,7 @@ export const Navbar = () => {
                         <Link to="/simulador" className={isActive('/simulador')}>Simulador</Link>
                     </li>
                     <li>
-                        <Link to="/solicitar" className={isActive('/solicitar')}>Créditos</Link>
+                        <Link to="/solicitar" className={isActive('/solicitar')}>Solicitar</Link>
                     </li>
                     <li>
                         <Link to="/about" className={isActive('/about')}>Nosotros</Link>

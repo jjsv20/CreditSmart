@@ -93,6 +93,6 @@ export const credits = [
             "No tener deudas pendientes",
             "Ingresos mínimos de $1,000,000 mensuales",
             ],
-        icon: "/public/img1.png"
+        icon: "/public/img6.png"
     }
 ]
