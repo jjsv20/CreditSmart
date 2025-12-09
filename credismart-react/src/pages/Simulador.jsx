@@ -72,7 +72,11 @@ const Simulador = () => {
           <div className="credits-grid">
             {creditosFiltrados.length > 0 ? (
               creditosFiltrados.map((c) => (
-                <CreditCard key={c.id} credits={c} />
+                <CreditCard 
+                  key={c.id} 
+                  credits={c}
+                  modo="completo"
+                />
               ))
             ) : (
               <p className="text-center mt-4 fs-5 fw-bold text-danger">

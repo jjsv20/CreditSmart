@@ -11,7 +11,10 @@ export const Navbar = () => {
     return (
         <nav className='navbar'>
             <div className='container'>
-                <Link to="/" className='nav-brand'>CreditSmart</Link>
+                <Link to="/" className='nav-brand'>
+                    <img src="/public/logo.png" alt="creditsmart-logo" className='logo'/>
+                    CreditSmart
+                </Link>
 
                 <ul className='nav-menu'>
                     <li>
