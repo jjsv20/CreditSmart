@@ -26,9 +26,6 @@ export const Navbar = () => {
                     <li>
                         <Link to="/solicitar" className={isActive('/solicitar')}>Solicitar</Link>
                     </li>
-                    <li>
-                        <Link to="/about" className={isActive('/about')}>Nosotros</Link>
-                    </li>
                 </ul>
             </div>
         </nav>

@@ -1,7 +1,7 @@
 export const credits = [
     {
         id: 1,
-        name: "Credito de libre inversión",
+        name: "Credito libre inversión",
         description: "Un crédito que puedes usar para cualquier propósito personal.",
         montoMin: 1000000,
         montoMax: 50000000,
@@ -66,7 +66,7 @@ export const credits = [
     {
         id: 5,
         name: "Crédito Empresarial",
-        description: "Impulsa el crecimiento de tu pequeña o mediana empresa.",
+        description: "Impulsa el crecimiento de tu negocio con nuestro crédito empresarial flexible.",
         montoMin: 5000000,
         montoMax: 100000000,
         tasaInteres: 1.1,

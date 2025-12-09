@@ -34,11 +34,25 @@ export const Home = () => {
             });
         }
 
-        if (!statsStarted) {
-            startCounting();
-            statsStarted = true;
-        }
-    }, [])
+        const section = document.querySelector('.stats-section');
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            if (entries[0].isIntersecting && !statsStarted) {
+                startCounting();
+                statsStarted = true;
+            }
+        },
+        { threshold: 0.5 } 
+    );
+
+    if (section) observer.observe(section);
+
+    return () => {
+        if (section) observer.unobserve(section);
+    };
+
+}, []);
 
     return (
         <>
@@ -46,25 +60,25 @@ export const Home = () => {
 
             <section className="beneficios">
                 <div className="beneficio-card">
-                    <img src="/public/trend.png" className="icono" />
+                    <i className="bi bi-graph-up-arrow icono"></i>
                     <h3>Tasas Competitivas</h3>
                     <p>Las mejores tasas del mercado financiero colombiano</p>
                 </div>
 
                 <div className="beneficio-card">
-                    <img src="/public/shield.png" className="icono" />
+                    <i className="bi bi-shield-check icono"></i>
                     <h3>Proceso Seguro</h3>
                     <p>Tecnología de punta para proteger tu información</p>
                 </div>
 
                 <div className="beneficio-card">
-                    <img src="/public/clock.png" className="icono" />
+                    <i className="bi bi-clock-history icono"></i>
                     <h3>Aprobación Rápida</h3>
                     <p>Respuesta en menos de 24 horas hábiles</p>
                 </div>
 
                 <div className="beneficio-card">
-                    <img src="/public/medal.png" className="icono" />
+                    <i className="bi bi-award icono"></i>
                     <h3>Experiencia</h3>
                     <p>Más de 15 años en el sector financiero</p>
                 </div>
@@ -96,7 +110,7 @@ export const Home = () => {
 
                         <div className="col-md-3 mb-4">
                             <div className="stat-number" data-target="15">10</div>
-                                <h5>Años de experiencia</h5>
+                                <h5>Años de trayectoria</h5>
                         </div>
                         <div className="col-md-3 mb-4">
                             <div className="stat-number" data-target="500">0</div>
@@ -104,11 +118,11 @@ export const Home = () => {
                         </div>
                         <div className="col-md-3 mb-4">
                             <div className="stat-number" data-target="6">0</div>
-                                <h5>Productos</h5>      
+                                <h5>Servicios</h5>      
                         </div>
                         <div className="col-md-3 mb-4">
                             <div className="stat-number" data-target="4">0</div>
-                                <h5>Sedes</h5>
+                                <h5>Sucursales</h5>
                         </div>
                     </div>
                 </div>
