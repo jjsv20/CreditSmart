@@ -1,57 +1,41 @@
-import React from 'react'
 import { Hero } from '../components/Hero';
-import { credits } from '../data/credits';
-import CreditCard from '../components/CreditCard';
+import { useState, useEffect } from 'react';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../firebase/config';
+import  CreditCard  from '../components/CreditCard';
 import { Link } from 'react-router-dom'
-import { useEffect } from 'react';
+
 
 
 
 export const Home = () => {
 
-    console.log('Datos de créditos:', credits);
-    
-    useEffect(() => {
-        const counters = document.querySelectorAll('.stat-number');
-        let statsStarted = false;
+    //console.log('Datos de créditos:', credits);
 
-        function startCounting() {
-            counters.forEach(counter => {
-                const updateCount = () => {
-                    const target = +counter.getAttribute('data-target');
-                    const count = +counter.innerText;
-                    const speed = 30;
-                    const increment = target / speed;
+    const [credits, setCredits] = useState([]);
 
-                    if (count < target) {
-                        counter.innerText = Math.ceil(count + increment);
-                        setTimeout(updateCount, 20);
-                    } else {
-                        counter.innerText = target;
-                    }
-                };
-                updateCount();
-            });
-        }
+    useEffect(() => { 
+       const cargarCredits = async () => {
+      try {
+        console.log("Cargando créditos...");
+        const ref = collection(db, "credits");
+        const snap = await getDocs(ref);
 
-        const section = document.querySelector('.stats-section');
+        const lista = snap.docs.map(doc => ({
+          id: doc.id,
+          ...doc.data()
+        }));
 
-    const observer = new IntersectionObserver(
-        (entries) => {
-            if (entries[0].isIntersecting && !statsStarted) {
-                startCounting();
-                statsStarted = true;
-            }
-        },
-        { threshold: 0.5 } 
-    );
+        console.log("Créditos encontrados:", lista);
 
-    if (section) observer.observe(section);
+        setCredits(lista);
 
-    return () => {
-        if (section) observer.unobserve(section);
+      } catch (error) {
+        console.error("Error cargando créditos:", error);
+      }
     };
 
+    cargarCredits();
 }, []);
 
     return (
