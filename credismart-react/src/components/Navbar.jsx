@@ -5,7 +5,7 @@ export const Navbar = () => {
 
     const location = useLocation();
     const isActive = (path) => {
-        return location.pathname === path ? 'active' : '';
+        return location.pathname === path || location.pathname.startsWith(path + '/') ? 'active' : '';
     }
 
     return (

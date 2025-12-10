@@ -1,8 +1,36 @@
-import React from 'react'
-import { credits } from '../data/credits';
-import CreditCard from '../components/CreditCard';
+import React, { useState, useEffect } from 'react';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../firebase/config';
+import  CreditCard  from '../components/CreditCard';
+
 
 const Simulador = () => {
+
+  const [credits, setCredits] = useState([]);
+
+    useEffect(() => { 
+       const cargarCredits = async () => {
+      try {
+        console.log("Cargando créditos...");
+        const ref = collection(db, "credits");
+        const snap = await getDocs(ref);
+
+        const lista = snap.docs.map(doc => ({
+          id: doc.id,
+          ...doc.data()
+        }));
+
+        console.log("Créditos encontrados:", lista);
+
+        setCredits(lista);
+
+      } catch (error) {
+        console.error("Error cargando créditos:", error);
+      }
+    };
+
+    cargarCredits();
+}, []);
 
     const [busqueda, setBusqueda] = React.useState('');
     const [filtroMonto, setFiltroMonto] = React.useState('');
@@ -36,16 +64,16 @@ const Simulador = () => {
         <section className='credits-section'>
           <h2 className='credits-title'>Catálogo de Créditos</h2>
           
-            <div class="row mb-4">
-              <div class="col-md-4">
+            <div className="row mb-3">
+              <div className="col-md-4">
                 <input type="text" 
-                  class="form-control" 
+                  className="form-control" 
                   placeholder="Buscar crédito por nombre" 
                   value={busqueda} onChange={(e) => setBusqueda(e.target.value)}>
                 </input>
               </div>
 
-              <div class="col-md-4">
+              <div className="col-md-4">
                 <select class="form-select"
                   value={filtroMonto}
                   onChange={(e) => setFiltroMonto(e.target.value)}
@@ -57,7 +85,7 @@ const Simulador = () => {
                 </select>
               </div>
 
-              <div class="col-md-4">
+              <div className="col-md-4">
                 <select class="form-select"
                     value={filtroTasa}
                     onChange={(e) => setFiltroTasa(e.target.value)}

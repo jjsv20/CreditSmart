@@ -47,7 +47,7 @@ const CreditCard = ({ credits, modo = "simple" }) => {
                 </div>
             )}
 
-            <Link to={'/solicitar/${id}'} className="btn-primary">
+            <Link to={`/solicitar/${id}`} className="btn-primary">
                 Solicitar Ahora
             </Link>
         </div>
