@@ -7,12 +7,12 @@ import { getFirestore } from "firebase/firestore"; "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBHcoQlmmZLujk4anndY0_IH6kwC2z0dzk",
-  authDomain: "creditsmart-f6d1e.firebaseapp.com",
-  projectId: "creditsmart-f6d1e",
-  storageBucket: "creditsmart-f6d1e.firebasestorage.app",
-  messagingSenderId: "985612864880",
-  appId: "1:985612864880:web:3750d78df86ae702bb13b5"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
 // Initialize Firebase
