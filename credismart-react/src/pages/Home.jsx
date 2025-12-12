@@ -87,31 +87,6 @@ export const Home = () => {
                 </section>
             </main>
 
-            
-            <section className="stats-section py-5">
-                <div className="container-number">
-                    <div className="row text-center">
-
-                        <div className="col-md-3 mb-4">
-                            <div className="stat-number" data-target="15">10</div>
-                                <h5>Años de trayectoria</h5>
-                        </div>
-                        <div className="col-md-3 mb-4">
-                            <div className="stat-number" data-target="500">0</div>
-                                <h5>Clientes</h5>
-                        </div>
-                        <div className="col-md-3 mb-4">
-                            <div className="stat-number" data-target="6">0</div>
-                                <h5>Servicios</h5>      
-                        </div>
-                        <div className="col-md-3 mb-4">
-                            <div className="stat-number" data-target="4">0</div>
-                                <h5>Sucursales</h5>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             <section className='endhero'>
                 <div className="container-endhero">
                     <h2>¿Listo para solcitar tu Crédito?</h2>
